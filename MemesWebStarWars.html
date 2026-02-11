@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="MemesWebStarWars.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="welcome">
+      <h1 class="welcom-header">
+        Velkommen til de beste Star Wars-memesa.
+        <p>Trykk på knappen for å starte!</p>
+      </h1>
+      <a href="index.html">
+        <button class="lotr-button">🧙‍♂️</button>
+      </a>
+    </header>
+
+    <div class="main-button">
+      <div class="venstre-knapp">
+        <button class="new-picture-button" onclick="visNesteBilde()">
+          👽👽👽
+        </button>
+      </div>
+      <div class="høyre-bilder">
+        <img id="bilde" src="" />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const bilder = [
+      "Bilder2/1.jpg",
+      "Bilder2/2.jpg",
+      "Bilder2/3.jpg",
+      "Bilder2/4.jpg",
+      "Bilder2/5.jpg",
+      "Bilder2/6.jpg",
+      "Bilder2/7.jpg",
+      "Bilder2/8.jpg",
+      "Bilder2/9.jpg",
+      "Bilder2/10.jpg",
+      "Bilder2/11.jpg",
+      "Bilder2/12.jpg",
+      "Bilder2/13.jpg",
+      "Bilder2/14.jpg",
+      "Bilder2/15.jpg",
+      "Bilder2/16.jpg",
+      "Bilder2/17.jpg",
+    ];
+
+    let plassnummer = 0;
+
+    function visNesteBilde() {
+      const bildeElement = document.getElementById("bilde");
+      bildeElement.src = bilder[plassnummer];
+      plassnummer = (plassnummer + 1) % bilder.length;
+    }
+  </script>
+</html>

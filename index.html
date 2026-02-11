@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="MemesWeb.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="welcome">
+      <h1 class="welcom-header">
+        Velkommen til de beste Ringenes Herre-memesa.
+        <p>Trykk på knappen for å starte!</p>
+      </h1>
+      <a href="MemesWebStarWars.html">
+        <button class="starWars-button">👽</button>
+      </a>
+    </header>
+
+    <div class="main-button">
+      <div class="venstre-knapp">
+        <button class="new-picture-button" onclick="visNesteBilde()">
+          🧙‍♂️🧙‍♂️🧙‍♂️
+        </button>
+      </div>
+      <div class="høyre-bilder">
+        <img id="bilde" src="" />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const bilder = [
+      "Bilder/1.jpg",
+      "Bilder/2.jpg",
+      "Bilder/3.jpg",
+      "Bilder/4.jpg",
+      "Bilder/5.jpg",
+      "Bilder/6.jpg",
+      "Bilder/7.jpg",
+      "Bilder/8.jpg",
+      "Bilder/9.jpg",
+      "Bilder/10.jpg",
+      "Bilder/11.jpg",
+      "Bilder/12.jpg",
+      "Bilder/13.jpg",
+      "Bilder/14.jpg",
+      "Bilder/15.jpg",
+      "Bilder/16.jpg",
+    ];
+
+    let plassnummer = 0;
+
+    function visNesteBilde() {
+      const bildeElement = document.getElementById("bilde");
+      bildeElement.src = bilder[plassnummer];
+      plassnummer = (plassnummer + 1) % bilder.length;
+    }
+  </script>
+</html>
